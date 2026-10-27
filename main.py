@@ -4,6 +4,7 @@ from steam_random import get_random_nickname
 window = tk.Tk()
 window.title("Рандомайзер ников Steam")
 window.geometry("400x200")
+window.iconbitmap("icon.ico")
 
 nick_label = tk.Label(window, text="Нажми кнопку", font=("Arial", 18))
 nick_label.pack(pady=30)

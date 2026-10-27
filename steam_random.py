@@ -17,7 +17,7 @@ def get_random_nickname():
             continue
 
         nickname = root.findtext('steamID')
-        if nickname:
+        if nickname and not nickname.isdigit():
             return nickname
 
     return None
