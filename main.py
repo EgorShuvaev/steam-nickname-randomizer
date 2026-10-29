@@ -1,6 +1,11 @@
+import os
+import sys
 import customtkinter as ctk
 from steam_random import get_random_nickname
 
+def resource_path(relative_path):
+    base = getattr(sys, "_MEIPASS", os.path.dirname(os.path.abspath(__file__)))
+    return os.path.join(base, relative_path)
 
 ctk.set_appearance_mode("dark")
 ctk.set_default_color_theme("blue")
@@ -10,7 +15,7 @@ class App(ctk.CTk):
         super().__init__()
         self.title("Программа Steam random nickname")
         self.geometry("900x600")
-        self.iconbitmap("main.ico")
+        self.iconbitmap(resource_path("main.ico"))
 
         self.menu_page = ctk.CTkFrame(self)
         self.work_page = ctk.CTkFrame(self)
